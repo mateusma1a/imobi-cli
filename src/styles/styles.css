@@ -1,0 +1,280 @@
+/* General CSS */
+* {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 130%;
+}
+
+.App {
+  height: 100vh;
+  padding: 10px;
+}
+
+.header {
+  display: flex;
+  justify-content: end;
+  background-color: #01001c;
+  padding: 2px;
+  width: 100%;
+  position: fixed;
+  color: white;
+  text-align: end;
+  z-index: 1;
+}
+
+.header-dropdown {
+  background-color: #01001c !important;
+  border-color: #01001c !important;
+}
+
+#logo-img-header {
+  position: fixed;
+  width: 90px;
+  height: 25px;
+  float: left !important;
+  left: 10px;
+  margin-top: 10px;
+  background-color: white;
+  padding: 2px;
+  border-radius: 10px;
+}
+
+.footer {
+  background-color: #01001c;
+  position: fixed;
+  bottom: 0;
+  padding-right: 10px;
+  width: 100%;
+  margin-top: 10px;
+  color: white;
+  font-weight: bold;
+  display: flex;
+  justify-content: right;
+  z-index: 1;
+}
+
+/* Login page CSS */
+#initial-page {
+  background-color: #01001c;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+label {
+  font-weight: bolder;
+}
+
+.primary-button {
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+  padding: 5px;
+  height: 48px;
+  width: 97%;
+  font-weight: bolder;
+  color: white;
+  background: #01001c;
+  border-radius: 15px;
+  border: white 2px solid;
+}
+.primary-button:hover {
+  background: white;
+  color: #01001c;
+  border: #01001c 2px solid;
+}
+
+.secundary-button {
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+  padding: 5px;
+  height: 48px;
+  width: 97%;
+  font-weight: bolder;
+  color: black;
+  text-align: center;
+  background: white;
+  border-radius: 15px;
+  border: white 2px solid;
+}
+.secundary-button:hover {
+  color: #01001c;
+  border: #01001c 2px solid;
+}
+
+.secundary-button a {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  font-weight: bolder;
+  color: black;
+  text-align: center;
+}
+
+#initial-card {
+  width: 40%;
+  height: 55%;
+  background-color: white;
+  border-radius: 25px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 10px;
+}
+
+#logo-img {
+  width: 19%;
+  margin-right: 15%;
+  float: left;
+  margin: 20px;
+}
+
+#button-bottom-right {
+  position: absolute;
+  bottom: 10px;
+  padding: 10px;
+  left: 10px;
+  width: 20%;
+}
+
+.form-content {
+  display: flex;
+  width: 100%;
+}
+
+@media (max-width: 1300px) {
+  #initial-card {
+    width: 80%;
+    height: 70%;
+  }
+}
+@media (max-width: 650px) {
+  #initial-card {
+    width: 100%;
+    height: 100%;
+  }
+}
+@media (max-width: 450px) {
+  #initial-card {
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+  }
+}
+@media (max-height: 900px) {
+  #initial-card {
+    height: 95%;
+  }
+}
+.full-content {
+  display: flex;
+}
+
+.main-content {
+  width: 100%;
+  height: 87vh;
+  margin-top: 8vh;
+  margin-right: 5px;
+  border-radius: 10px;
+  padding: 10px;
+  background-color: rgb(238, 234, 234);
+}
+
+.register-building-map {
+  border-radius: 15px;
+}
+
+.buildings-location-map {
+  border-radius: 15px;
+  height: 85vh;
+}
+
+.primary-button-register {
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+  padding: 5px;
+  height: 40px;
+  font-weight: bolder;
+  color: white;
+  background: #01001c;
+  border-radius: 15px;
+  border: #01001c 2px solid;
+  float: right;
+}
+.primary-button-register:hover {
+  background: white;
+  color: #01001c;
+  border: #01001c 2px solid;
+}
+
+.register-building-map {
+  grid-area: map;
+  margin-right: 10px;
+}
+
+.state {
+  grid-area: state;
+  margin-right: 10px;
+  margin-top: 10px;
+}
+
+.city {
+  grid-area: city;
+  margin-right: 10px;
+  margin-top: 10px;
+}
+
+.neighborhood {
+  grid-area: neighborhood;
+  margin-right: 10px;
+  margin-top: 10px;
+}
+
+.street {
+  grid-area: street;
+  margin-right: 10px;
+  margin-top: 10px;
+}
+
+.numberAddress {
+  grid-area: numberAddress;
+  margin-right: 10px;
+  margin-top: 10px;
+}
+
+.address {
+  grid-area: address;
+  margin-right: 10px;
+  margin-top: 10px;
+}
+
+.primary-button-register {
+  grid-area: button;
+}
+
+.form-content-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  grid-template-areas: "map map map state city city" "map map map neighborhood neighborhood numberAddress" "map map map street street street" "map map map address address address" "map map map . button button";
+}
+
+.building-card {
+  width: 300px;
+  height: 400px;
+}
+
+.buildings-content {
+  display: flex;
+  width: 100%;
+}
+
+.pdf-btn {
+  position: fixed !important;
+  bottom: 35px;
+  right: 15px;
+}/*# sourceMappingURL=styles.css.map */
